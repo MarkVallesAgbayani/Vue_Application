@@ -1,21 +1,21 @@
 <script setup>
-  import {ref} from 'vue';
-  import sampleImage from './assets/images/sample_image.webp';
+  import ProductDetails from '@/components/ProductDetails.vue'
+  import Darkmode from '@/components/Darkmode.vue'
+  import About from '@/components/About.vue'
 
-  const description = ref('This is a sample Vue component.');
-  const url = ref('https://www.youtube.com/');
-  const image = ref(sampleImage);
+
+
+  const details = ["Props1" , "Props2", "Props3"];
 
 </script>
 
 <template>
-  <p>Description: {{ description }}</p>
-  <a :href="url" target="_blank">Go to YouTube</a>
+  <About></About>
 
-  <div>
-    <p>This is image:</p>
-    <img :src="image" alt="Sample Image" />
-  </div>
+  <nav class="bg-gray-800 p-4 text-white text-center">
+    <h1 class="text-2xl font-bold">My Vue App</h1>
+  </nav>
+  <ProductDetails :details="details"></ProductDetails>
+  <hr>
+  <Darkmode></Darkmode>
 </template>
-
-<style scoped></style>
